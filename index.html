@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/grid.css">
+    <link rel="stylesheet" href="/styles/index.css">
+    <!-- <link rel="stylesheet" href="/styles/debug.css"> -->
+    <title>Document</title>
+</head>
+<body>
+    <div class="parent-1">
+        <div class="div1">
+            <header class="header">
+                <nav class="navbar">
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Projects</a>
+                        </li>
+                    </ul>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
+        </header> 
+        <button>
+            <a href="#">Request Now</a>
+        </button>
+        </div>
+        <div class="div2">
+            <img src="/images/woodworking.png" alt="handyman working with wood">    
+        </div>
+        <div class="div3"> 
+            <img id="pic-1" src="/images/handymanShakingHands.png" alt="handyman shaking hands with client">
+        </div>
+        <div class="div4"> 
+            <p id="quote-2">...for working professionals, 
+                students, & anyone who 
+                needs stuff done today!*</p>
+        </div>
+        <div class="div5">
+            <p id="quote-1">...a residential Handyman & Chore company...</p>
+        </div>
+        <div class="div6">
+            <h1 id="businessName">Ruiz Home Services</h1> 
+        </div>
+    </div>
+    <section>
+        <div class="card-section">
+            <div class="card" id="card-1">
+                <img class="cardImage" src="/images/front-backYard.png" alt="backYard">
+                <h2 class="cardTitle" >Front/Back Yard Services</h2>
+                <p class="cardPara" >Services for your backyard.</p>
+            </div>
+            <div class="card" id="card-2">
+                <img class="cardImage" src="/images/furnitureBuilding.png" alt="furniture Building">
+                <h2 class="cardTitle" >Furniture Building</h2>
+                <p class="cardPara" >Get Furniture built once you order it the same day.</p>
+            </div>
+            <div class="card" id="card-3">
+                <img class="cardImage" src="/images/paintingServices.png" alt="Painting Services">
+                <h2 class="cardTitle" >Painting Services</h2>
+                <p class="cardPara" >Painting services for any room in your home, or on your deck and patio.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
