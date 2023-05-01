@@ -159,15 +159,6 @@ a {
   align-items: center;
   background-color: #C78017;
 }
-#card-1{
-  
-}
-#card-2{
-  
-}
-#card-3{
-  
-}
 .cardImage{
   width: 219px;
 }
@@ -273,11 +264,13 @@ footer {
   color: rgba(255,140,0,1);
 }
 
+/************************************************************************************/
 
 @media (max-width: 768px) {
   .parent-1 {
     grid-template-rows: repeat(6, auto);
-    height: auto;
+    height: 1077px;
+    width: 390px;
   }
 
   .div1 {
@@ -367,8 +360,8 @@ footer {
   }
   .card{
     position: relative;
-    width: 473px;
-    height: 440px;
+    width: 193px;
+    height: 173px;
     border: 2px solid #ff9800;
     border-radius: 51px;
     margin: 30px;
@@ -381,14 +374,14 @@ footer {
     background-color: #C78017;
   }
   .cardImage{
-    width: 219px;
+    width: 67px;
   }
   .cardTitle{
-    font-size: 40px;
+    font-size: 18px;
     color: #ffffff;
   }
   .cardPara{
-    font-size: 25px;
+    font-size: 12px;
     text-align: center;
     color: #ffffff;
   }
