@@ -10,10 +10,7 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  background-color: ;
-  width: 100%;
+  width: 1440px;
   height: 1024px;
   overflow: hidden;
   background: rgb(255,255,255);
@@ -134,18 +131,21 @@ a {
   color: #ffffff;
   width: 460px;
 } 
-.card-section{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 50px;
-  height: auto;
-  padding: 35px;
-  margin: 20px;
+/*card section*/
+/*i started this without a grid layout for this section and it has become unbearable to 
+recode and stuffs. 5/1/23: I will recode this section for grid layout and better scalability.
+I love coding!! -~~-xoLR*/
+.card-section, #parent-2{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  width: 1440px;
+  height: 1079px;
 }
+/* .div1 { grid-area: 3 / 3 / 6 / 6; }
+.div2 { grid-area: 3 / 8 / 6 / 11; }
+.div3 { grid-area: 7 / 5 / 11 / 9; } */
 .card{
-  position: relative;
   width: 473px;
   height: 440px;
   border: 2px solid #ff9800;
@@ -170,6 +170,15 @@ a {
   font-size: 25px;
   text-align: center;
   color: #ffffff;
+}
+#card-1{
+  grid-area: 3 / 3 / 6 / 6;
+}
+#card-2{
+  grid-area: 3 / 8 / 6 / 11;
+}
+#card-3{
+  grid-area: 7 / 5 / 11 / 9;
 }
 /* CTA section */
 .cta {
@@ -214,30 +223,28 @@ a {
   margin: 0;
 }
 
-/* Footer section */
-footer {
+/* Updated styles for the footer */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #333;
-  color: #fff;
-  padding: 20px 0;
 }
 
-.footer-container {
+.footer-content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.parent-2 {
-  display: flex;
-  flex-direction: column;
-}
-
-.div7, .div8 {
+.quick-links {
   margin-bottom: 20px;
 }
 
 #aboutUs {
   font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #fff;
 }
 
 .nav-link {
@@ -264,13 +271,15 @@ footer {
   color: rgba(255,140,0,1);
 }
 
+
 /************************************************************************************/
 
 @media (max-width: 768px) {
   .parent-1 {
     grid-template-rows: repeat(6, auto);
     height: 1077px;
-    width: 390px;
+    width: auto;
+    overflow: hidden;
   }
 
   .div1 {
@@ -304,12 +313,20 @@ footer {
     order: 6;
     font-size: 15px;
   }
+  #quote-1{
+    font-size: auto;
+    color: #ffffff;
+    width: 300px;
+  }
+  #quote-2{
+    font-size: 40px;
+    color: #ffffff;
+    width: 350px;
+    text-align: end;
+} 
 
   img {
     width: 100%;
-  }
-  #pic-1{
-
   }
   .nav-menu {
     position: fixed;
@@ -348,16 +365,17 @@ footer {
   .hamburger.active .bar:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
   }
-  .card-section{
+  .card-section, #parent-2{
     display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 745px;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    margin-top: 50px;
-    height: auto;
-    padding: 35px;
-    margin: 20px;
   }
+    /* .div1 { grid-area: 2 / 6 / 4 / 8; }
+  .div2 { grid-area: 5 / 6 / 7 / 8; }
+  .div3 { grid-area: 8 / 6 / 10 / 8; } */
   .card{
     position: relative;
     width: 193px;
@@ -385,14 +403,34 @@ footer {
     text-align: center;
     color: #ffffff;
   }
-  .parent-2 {
-    flex-direction: row;
-    justify-content: space-between;
+  #card-1{
+    /* grid-area: 2 / 6 / 4 / 8; */
   }
-
-  .div7, .div8 {
-      margin-bottom: 0;
+  #card-2{
+    /* grid-area: 5 / 6 / 7 / 8; */
   }
-  
+  #card-3{
+    /* grid-area: 8 / 6 / 10 / 8; */
+  }
+  .cta {
+    width: auto;
+  }
+  #ctaTitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  #ctaPara {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  #ctaButton {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 10px 2px;
+  }
+  .footer-container {
+    width: auto;
+    padding: 50px 0;
+  }  
 }
     
