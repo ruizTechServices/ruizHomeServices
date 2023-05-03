@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/grid.css">
+    <title>Ruiz Home Services ~projects~</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="div1">
+            <header class="header">
+                <nav class="navbar">
+                  <div class="navbar-container">
+                    <div class="navbar-toggle">
+                      <span class="navbar-toggle-icon"></span>
+                    </div>
+                  </div>
+                  <ul class="nav-menu">
+                    <li class="nav-item">
+                      <a href="/index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="/projects.html" class="nav-link">Projects</a>
+                    </li>
+                  </ul>
+                </nav>
+              </header>               
+        </div>
+        <div class="div2">
+            <section class='FlexContainer'>
+                <div></div>
+            </section>
+        </div>
+        <div class="div3">
+            <footer>
+                <div class="footer-container">
+                    <div class="footer-content">
+                        <div class="quick-links">
+                            <h2 id="aboutUs">Quick Links</h2>
+                            <a href="#" class="nav-link">Home</a>
+                            <a href="#" class="nav-link">Contact</a>
+                            <a href="#" class="nav-link">Projects</a>
+                        </div>
+                        <div class="copyName">
+                            <span><a class="" href="http://ruiztechservices.com"> &copy 2023 ruizTechServices</a></span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+       </div>
+    </div>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+    </script>  
+</body>
+</html>
