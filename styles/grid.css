@@ -1,3 +1,11 @@
+*, 
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Hubballi', cursive;
+}
 .parent {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -59,18 +67,65 @@
     color: #ffffff;
     text-decoration: none;
 }
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .quick-links {
+    flex: 1 1 250px;
+  }
+  
+  .quick-links h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .nav-link {
+    display: block;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 10px;
+    text-decoration: none;
+  }
+  
+  .copyName {
+    flex: 1 1 250px;
+    text-align: right;
+  }
+  
+  .copyName a {
+    color: #fff;
+    text-decoration: none;
+  }
 
 
 /*--------------------------------------------------------------------------*/
 .FlexContainer {
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     align-content: center;
-    width: 1200px;
+    width: auto;
     background: linear-gradient(153deg, rgba(255,255,255,1) 0%, rgba(255,140,0,1) 32%, rgba(0,0,0,1) 94%);
-    height: 80vh;
+    height: max-content;
     overflow: auto;
     flex-direction: row;
 }
@@ -81,6 +136,21 @@
     margin: 5px;
     background-color: rgb(255, 255, 255);
     border-radius: 25px;
+    margin: 20px;
+}
+
+.FlexContainer img{
+    width: 100px;
+    height: 100px;
+    border-radius: 25px;
+    margin: 20px;
+
+}
+#titleProjects{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 20px;
 }
 /*-------------------mobile--------------------------------*/
 @media screen and (max-width: 768px) {
@@ -130,5 +200,24 @@
         margin: 5px;
         background: rgb(255, 255, 255);
         border-radius: 25px;
+    }
+    footer{
+        width: auto;
+        background-color: #333;
+        color: #fff;
+        padding: 50px 0;
+    }
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .quick-links,
+    .copyName {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+    
+    .quick-links {
+        margin-bottom: 20px;
     }
 }
