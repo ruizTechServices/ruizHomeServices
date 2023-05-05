@@ -21,7 +21,7 @@
                             <a href="/index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#contact">Contact</a>
+                            <a href="/contact.html">Contact</a>
                         </li>
                         <li class="nav-item">
                             <a href="/projects.html">Projects</a>
@@ -34,9 +34,29 @@
                     </div>
                 </nav>
             </header> 
-        <button>
-            <a href="#">Request Now</a>
-        </button>
+            <button id="openModal">
+                <a href="#">Request Now</a>
+            </button>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <form id="requestForm">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="phone">Phone:</label>
+                        <input type="phone" id="phone" name="phone" required>
+                        
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                        
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
         </div>
         <div class="div2">
             <img src="/images/woodworking.png" alt="handyman working with wood">    
@@ -98,6 +118,7 @@
                 <div class="copyName">
                     <span><a class="" href="http://ruiztechservices.com"> &copy 2023 ruizTechServices</a></span>
                 </div>
+                <div>apply now! <a href="/contact_form.html"> now hiring </a></div>
             </div>
         </div>
     </footer>
@@ -114,5 +135,6 @@
             navMenu.classList.toggle("active");
         }
     </script>
+    <script src="/scripts/modal.js"></script>
 </body>
 </html>
