@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/contact_form.css">
+    <title>Employment Application Form</title>
+</head>
+<body>
+    <form action="submit_employment_application.php" method="post" enctype="multipart/form-data">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+        <br>
+
+        <label for="phone_number">Phone Number:</label>
+        <input type="tel" id="phone_number" name="phone_number" required>
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+
+        <label for="availability">Availability:</label>
+        <select id="availability" name="availability" required>
+            <option value="full-time">Full-time</option>
+            <option value="part-time">Part-time</option>
+            <option value="temporary">Temporary</option>
+            <option value="freelance">Freelance</option>
+        </select>
+        <br>
+
+        <label for="experience">Experience:</label>
+        <textarea id="experience" name="experience" required></textarea>
+        <br>
+
+        <label for="photo_proof">Upload Photo Proof:</label>
+        <input type="file" id="photo_proof" name="photo_proof" required>
+        <br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

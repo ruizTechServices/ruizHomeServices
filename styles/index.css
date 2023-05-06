@@ -318,6 +318,9 @@ I love coding!! -~~-xoLR*/
 .copyName a:hover {
   color: rgba(255,140,0,1);
 }
+.apply{
+  color: white;
+}
 
 
 /************************************************************************************/
@@ -485,5 +488,8 @@ I love coding!! -~~-xoLR*/
     width: auto;
     padding: 50px 0;
   }  
+  .apply{
+    color: white;
+}
 }
     
