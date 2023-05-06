@@ -56,7 +56,8 @@ $sql = "INSERT INTO employment_applications (name, address, phone_number, email,
 VALUES ('$name', '$address', '$phone_number', '$email', '$availability', '$experience', '$photo_proof')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Application submitted successfully!";
+    // Redirect to index.html and show success message using JavaScript
+    header("Location: index.html?success=true");
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }

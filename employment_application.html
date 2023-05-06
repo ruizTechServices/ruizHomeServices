@@ -5,8 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/employment.css" />
     <title>Employment Application Form</title>
+    <style>
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+      
+      .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+      }
+      
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+      
   </head>
   <body>
+        <!-- Modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Application Submitted</h2>
+        <p>Your application has been submitted successfully!</p>
+      </div>
+    </div>
+
     <div class="parent1">
       <div class="div1">
         <nav-one class="nav-mobile">
@@ -110,5 +155,32 @@
       </div>
     </div>
     <script type="module" src="/scripts/nav-one.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const success = urlParams.get('success');
+    
+        if (success === 'true') {
+          // Show your modal here
+          const myModal = document.getElementById('myModal');
+          myModal.style.display = 'block';
+        }
+    
+        // Get the close button element
+        const closeButton = document.getElementsByClassName('close')[0];
+    
+        // When the user clicks on the close button, close the modal
+        closeButton.onclick = function () {
+          myModal.style.display = 'none';
+        };
+    
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+          if (event.target === myModal) {
+            myModal.style.display = 'none';
+          }
+        };
+      });
+    </script>        
   </body>
 </html>
