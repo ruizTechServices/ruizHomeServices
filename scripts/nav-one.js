@@ -1,4 +1,4 @@
-const template1 = document.createElement('template');
+const template1 = document.createElement("template");
 template1.innerHTML = `
   <style>
     button {
@@ -65,29 +65,29 @@ template1.innerHTML = `
 class NavOne extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: 'open' });
+    this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(template1.content.cloneNode(true));
 
-    this.button = this.shadowRoot.querySelector('.button-one');
-    this.menu = this.shadowRoot.querySelector('.menu');
+    this.button = this.shadowRoot.querySelector(".button-one");
+    this.menu = this.shadowRoot.querySelector(".menu");
     this._attachEventListeners();
   }
 
   _attachEventListeners() {
-    this.button.addEventListener('click', () => {
-      const currentState = this.button.getAttribute('aria-expanded');
+    this.button.addEventListener("click", () => {
+      const currentState = this.button.getAttribute("aria-expanded");
 
-      if (currentState === 'false') {
-        this.button.setAttribute('aria-expanded', 'true');
-        this.menu.classList.add('active');
+      if (currentState === "false") {
+        this.button.setAttribute("aria-expanded", "true");
+        this.menu.classList.add("active");
       } else {
-        this.button.setAttribute('aria-expanded', 'false');
-        this.menu.classList.remove('active');
+        this.button.setAttribute("aria-expanded", "false");
+        this.menu.classList.remove("active");
       }
     });
   }
 }
 
-window.customElements.define('nav-one', NavOne);
+window.customElements.define("nav-one", NavOne);
 
 export default NavOne;
